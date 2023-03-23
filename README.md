@@ -18,4 +18,6 @@ You should be able to see a version number for both. <br/>
 Login to your github account and FORK this code. <br/>
 This will make a repository and the code will be copied there. It will ask you how you would like to name your project, you may leave it as is. <br/> 
 Now that you have your own code copied, we need to code this to vscode.<br/>
-- Go to 
+- Select the "< > Code" button <br/> 
+You will see the option of how you want to download the code. Select <br/> 
+
