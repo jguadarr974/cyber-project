@@ -21,7 +21,7 @@ Now that you have your own code copied, we need to code this to vscode.<br/>
 - Select the "< > Code" button
 
 You will see the option of how you want to download the code. Select <br/> 
-"Github Cli" <br/>
+" Github CLI " <br/>
 and copy : <br/> 
-gh repo clone ...
+**gh repo clone ...
 <br/>
