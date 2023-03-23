@@ -15,7 +15,7 @@ You should be able to see a version number for both. <br/>
 
 ## Downloading Code :
 
-Login to your github account and FORK this code. <br/>
+On this repository, you will see a FORK button, select that <br/>
 This will make a repository and the code will be copied there. It will ask you how you would like to name your project, you may leave it as is. <br/> 
 Now that you have your own code copied, we need to code this to vscode.<br/>
 - Select the "**< > Code**" button
@@ -32,4 +32,5 @@ Open your visual studio code and you will see some options: <br/>
 - Clone Git Repository 
 
 Select **Clone Git Repository** and it will ask you from which repository <br/>
-Paste the link you copied and press enter 
+Paste the link you copied and press enter <br/>
+Then it will ask where you want this project to be placed. Make sure you select **Desktop** and have the project created there. 
