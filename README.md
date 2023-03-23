@@ -34,7 +34,7 @@ Open your visual studio code and you will see some options: <br/>
 Select **Clone Git Repository** and it will ask you from which repository <br/>
 Paste the link you copied and press enter <br/>
 Then it will ask where you want this project to be placed. Make sure you select **Desktop** and have the project created there. 
-You should now be able to see your code on visual studio.<br/>
+You should now be able to see your code on visual studio.<br/><br/>
 
 ## Running the program 
 
