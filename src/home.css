@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    
+}
+
+.reveal{
+    display: flex;
+    flex-direction: column;
+    animation: slide 2.5s linear;
+}
+
+@keyframes slide{
+    0%{
+        margin-top: 150px;
+        opacity: 0;
+    }
+    5%{opacity: 0;}
+    25%{opacity: 0; }
+    50%{opacity:0.05;}
+    65%{opacity: 0.15;}
+    75%{opacity: 0.25;}
+    85%{opacity: 0.35;}
+    100%{opacity: 1; }
+
+}
+
+.wrapper-text{
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    opacity: 0;
+    margin-top: 2rem;
+    line-height: 2;
+    animation: slide1 0.75s ease-out 4s forwards;
+}
+
+.button-wrapper{
+    display: flex;
+    gap: 2rem;
+    
+}
+@keyframes slide1{
+    100%{opacity: 1;}
+}
+
