@@ -1,5 +1,9 @@
 .main{
-    margin: auto 1rem;
+    margin: 1rem 1rem;
+    width:75%;
+    height: auto;
+    position: relative;
+    left: 10%;;
 }
 
 .quiz-game{
@@ -10,24 +14,49 @@
 }
 
 .question-section{
-    max-width: 20rem;
+    
     height: auto;
 }
 
 .question-text{
     font-style: italic;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 span{
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .answer-section{
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
+.answer-button{
+    width: 100%;
+    height: auto;
+}
 
+.hint-button{
+    background-color: rgb(255, 224, 102);
+    color: rgb(0, 0, 0);
+}
+
+.heart{
+    height: 2rem;
+}
+
+.Lives-Section{
+    display: flex;
+    gap: 1rem;
+}
+
+.Lives-Hints{
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}

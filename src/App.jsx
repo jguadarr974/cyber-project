@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/home';
 import Questions from './pages/question';
 import Instructions from './pages/Instructions';
+import Resources from './pages/resources';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/questions" element={<Questions/>}/>
         <Route path="/instructions" element={<Instructions/>}/>
+        <Route path="/resources" element={<Resources/>}/>
       </Routes>
     </div>
   )

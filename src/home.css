@@ -41,7 +41,6 @@
 .button-wrapper{
     display: flex;
     gap: 2rem;
-    
 }
 @keyframes slide1{
     100%{opacity: 1;}

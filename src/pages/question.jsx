@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../question.css';
+import heart from "./heart.png";
 
 function Question (questionIndex){
   const questions =[
@@ -641,6 +642,7 @@ function Question (questionIndex){
     if(isCorrect===true){
       alert("this answer is correct!");
       setScore(score + 1 );
+      if(livesCount==0){setLivesCount(livesCount+1)}
       const nextQuestion = currentQuestion+1;
       if(nextQuestion<questions.length){
         setCurrentQuestion(nextQuestion);
@@ -652,13 +654,17 @@ function Question (questionIndex){
     
     else{
       alert("wrong, please try again")
-      const nextQuestion = currentQuestion+1;
+      setLivesCount(livesCount - 1);
+      if(livesCount == 0){
+      const nextQuestion = currentQuestion + 1;
       if(nextQuestion<questions.length){
         setCurrentQuestion(nextQuestion);
         setShowHint(false);
       }else{
         setShowScore(true);
       }
+      setLivesCount(livesCount + 1);
+    }
     }
   }
 
@@ -667,6 +673,9 @@ function Question (questionIndex){
   const [showScore, setShowScore] = useState(false);
 
   const [score, setScore] = useState(0);
+
+  const [livesCount, setLivesCount] = useState(1);
+
 /* Used to set the state of showHint initially to false, hintCount is set first set to 0
 toggleHint checks the hintCount and if it is less than 3, it will setShowHint to true
 If 3 hints have been used it will alert the player that they ran out of hints
@@ -676,7 +685,7 @@ const question is used to track the question you are on and is used when resetti
   const [hintCount, setHintCount] = useState(0);
 
   const toggleHint = () => {
-    if (hintCount < 3){
+    if (hintCount < 6){
       setHintCount(hintCount + 1);
       setShowHint(true);
     }
@@ -696,23 +705,35 @@ const question is used to track the question you are on and is used when resetti
         <div className='score-section'>You Scored {score} out of {questions.length}</div>
       ):(
         <>
+      <div className='Whole-game'>
+        <div className='Quiz'>
           <div className='question-section'>
             <div className='question-count'>
               <span>Question {currentQuestion + 1}/{questions.length}</span>
             </div>
             <div className='question-text'>{questions[currentQuestion].questionText}</div>
           </div>
+          <div className='answer-section'>
+            {questions[currentQuestion].answerOptions.map((answerOptions)=>
+              <button className="answer-button" onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>
+            )}
+          </div>
+        </div>
+
           {/*Hint section with a button to toggle the hint and displays the hint and a hint count*/}
+<div className='Lives-Hints'>
           <div className='Hint-Section'>
-          <button onClick={toggleHint}>Hint</button>
+          <button className="hint-button"onClick={toggleHint}>Hint</button>
             {showHint && <p>{questions[currentQuestion].hint}</p>}
             <p>Hints Used: {hintCount}</p>
           </div>
-          <div className='answer-section'>
-            {questions[currentQuestion].answerOptions.map((answerOptions)=>
-              <button onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>
-            )}
+
+          <div className='Lives-Section'>
+            <img className='heart'src={heart} alt="Heart" />
+            {livesCount}
           </div>
+          </div>
+        </div>
         </>
       )}
       </div>
